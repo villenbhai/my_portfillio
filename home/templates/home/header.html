@@ -1,0 +1,112 @@
+{% load static %}
+<header class="navbar">
+  <nav>
+    <button id="darkModeToggle" class="dark-toggle"><img src="{% static 'images/logo.png' %}" alt="Logo" style="height:24px; width:auto;"></button>
+
+    <ul>
+      <li>
+        <a class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">
+          ONLINE PORTFOLIO
+        </a>
+      </li>
+      <li>
+        <a class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">
+          ABOUT ME
+        </a>
+      </li>
+      <li>
+        <a class="{% if request.resolver_match.url_name == 'education' %}active{% endif %}" href="{% url 'education' %}">
+          EDUCATION
+        </a>
+      </li>
+      <li>
+        <a class="{% if request.resolver_match.url_name == 'experience' %}active{% endif %}" href="{% url 'experience' %}">
+          EXPERIENCE
+        </a>
+      </li>
+      <li>
+        <a class="{% if request.resolver_match.url_name == 'project' %}active{% endif %}" href="{% url 'project' %}">
+          PROJECT
+        </a>
+      </li>
+      <li>
+        <a class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}" href="{% url 'contact' %}">
+          CONTACT
+        </a>
+      </li>
+      <li>
+        <a class="{% if request.resolver_match.url_name == 'skill' %}active{% endif %}" href="{% url 'skill' %}">
+          SKILLS
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <style>
+    /* Navbar container */
+    .navbar {
+      background-color: #1e1e2f; /* dark navy shade */
+      padding: 15px 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    /* Nav layout */
+    .navbar nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Button for dark mode toggle */
+    .dark-toggle {
+      background: transparent;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: #eee;
+      transition: color 0.3s ease;
+    }
+
+    .dark-toggle:hover {
+      color: #ffd700; /* golden glow on hover */
+    }
+
+    /* Navigation list */
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Nav links */
+    .navbar ul li a {
+      text-decoration: none;
+      color: #ddd;
+      font-weight: 600;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+      background-color: #33345a;
+      color: #ffd700;
+    }
+
+    /* Active link styling */
+    .navbar ul li a.active {
+      background-color: #ffd700;
+      color: #1e1e2f;
+      font-weight: 700;
+      box-shadow: 0 0 8px #ffd700aa;
+    }
+  </style>
+</header>

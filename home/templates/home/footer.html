@@ -1,0 +1,39 @@
+{% load static %}
+<footer>
+  <img src="{% static 'images/logo.png' %}" alt="VillenSec Logo" />
+  💖 No matter how deep the code, her love is my ultimate source file — Yours, Villen
+</footer>
+
+<style>
+  footer {
+    background-color: #121212;       /* Dark background for night coder vibes */
+    color: #e0e0e0;                  /* Soft off-white text */
+    font-family: 'Fira Code', monospace; /* Coding font for that hacker feel */
+    font-size: 16px;
+    text-align: center;
+    padding: 15px 20px;
+    border-top: 1px solid #333;      /* subtle border on top */
+    letter-spacing: 0.03em;
+    user-select: none;               /* prevents accidental text highlighting */
+    transition: color 0.3s ease;
+  }
+
+  footer:hover {
+    color: #ff4081;                  /* Pinkish glow on hover for that love spark */
+    cursor: default;
+  }
+
+  footer img {
+    vertical-align: middle;
+    margin-right: 8px;
+    height: 24px;
+    filter: drop-shadow(0 0 3px #ff4081);
+  }
+
+  @media (max-width: 480px) {
+    footer {
+      font-size: 14px;
+      padding: 12px 10px;
+    }
+  }
+</style>

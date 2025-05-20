@@ -1,0 +1,46 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}Education | Alexander Aronowitz{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/education.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="education-section" data-aos="fade-up">
+  <h1 class="section-title">My Education</h1>
+  <p class="section-intro">
+    Here’s a glimpse into my academic journey—where it all began, and how it shaped me into a web developer and security researcher.
+  </p>
+
+  <div class="education-timeline">
+    <div class="timeline-item">
+      <div class="timeline-year">2024 – Present</div>
+      <div class="timeline-details">
+        <h2>B.Sc. in Physical Sciences (PME)</h2>
+        <p><strong>Delhi University (DU)</strong></p>
+        <p>Focused on Physics, Math, and Electronics with a strong inclination towards cybersecurity and development. Currently exploring advanced topics in ethical hacking, web security, and full-stack development.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">2022 – 2024</div>
+      <div class="timeline-details">
+        <h2>Higher Secondary (12th Grade)</h2>
+        <p><strong>BIHAR Board</strong></p>
+        <p>Completed with a core focus on Physics, Chemistry, and Mathematics. Built foundational skills in analytical thinking and problem-solving.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">2020 – 2022</div>
+      <div class="timeline-details">
+        <h2>Secondary Education (10th Grade)</h2>
+        <p><strong>CBSE Board</strong></p>
+        <p>Started early interest in computing, programming, and network systems. Won school-level competitions in coding and robotics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

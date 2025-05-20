@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}Villen Bhai | Portfolio{% endblock %}</title>
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+  {% block extra_css %}{% endblock %}
+
+  <!-- ✅ AOS CSS for Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  {% include 'home/header.html' %}
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  {% include 'home/footer.html' %}
+
+  <!-- ✅ AOS JS and Initialization -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,  // 👈 you can tweak the duration (ms)
+      once: true       // 👈 animation occurs only once when scrolling down
+    });
+  </script>
+
+  <!-- Link header.js for dark mode toggle -->
+  <script src="{% static 'js/header.js' %}"></script>
+
+<script>
+  const roles = [
+    "PROFESSIONAL WEB DEVELOPER",
+    "SECURITY RESEARCHER",
+    "BOUNTY HUNTER"
+  ];
+  let index = 0;
+  const roleElement = document.getElementById('rotating-roles');
+
+  function rotateRoles() {
+    index = (index + 1) % roles.length; // cycle through roles
+    roleElement.textContent = roles[index];
+  }
+
+  setInterval(rotateRoles, 3000); // change every 3 seconds
+</script>

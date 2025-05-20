@@ -1,0 +1,47 @@
+
+/* Base Light Theme */
+body {
+  background: #ffffff;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+.navbar a.active {
+  color: #00ccff;
+  border-bottom: 2px solid #00ccff;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background: #121212;
+  color: #f0f0f0;
+}
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+}
+body.dark-mode .navbar a {
+  color: #ccc;
+}
+body.dark-mode .navbar a.active {
+  color: #00ffcc;
+  border-bottom: 2px solid #00ffcc;
+}
+
+/* Toggle Button */
+.dark-toggle {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

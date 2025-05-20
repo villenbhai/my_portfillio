@@ -1,0 +1,135 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}Skills | VillenSec{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/skill.css' %}">
+{% endblock %}
+{% block extra_js %}
+<script src="{% static 'js/skill.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<section class="skill-section" data-aos="fade-up" data-aos-duration="1200">
+  <h1 style="text-align:center; margin-bottom: 40px; font-weight: 800; color: #2e7d32;">Skills — My Arsenal</h1>
+  <div class="skill-container">
+    
+    <div class="skill-bar">
+      <div class="skill-title">
+        <span>Data Structures & Algorithms (DSA)</span>
+        <span class="percentage-label">90%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-fill" style="width: 90%;">90%</div>
+      </div>
+    </div>
+    
+    <div class="skill-bar">
+      <div class="skill-title">
+        <span>Python, C++, Java Programming</span>
+        <span class="percentage-label">85%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-fill" style="width: 85%;">85%</div>
+      </div>
+    </div>
+    
+    <div class="skill-bar">
+      <div class="skill-title">
+        <span>Backend Development (Django)</span>
+        <span class="percentage-label">80%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-fill" style="width: 80%;">80%</div>
+      </div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-title">
+        <span>Frontend Development (HTML, CSS)</span>
+        <span class="percentage-label">75%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-fill" style="width: 75%;">75%</div>
+      </div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-title">
+        <span>Cybersecurity & Ethical Hacking</span>
+        <span class="percentage-label">85%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-fill" style="width: 85%;">85%</div>
+      </div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-title">
+        <span>Penetration Testing Tools (Metasploit, John the Ripper, Aircrack-ng)</span>
+        <span class="percentage-label">80%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-fill" style="width: 80%;">80%</div>
+      </div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-title">
+        <span>Network & WiFi Hacking Techniques</span>
+        <span class="percentage-label">75%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-fill" style="width: 75%;">75%</div>
+      </div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-title">
+        <span>Bug Bounty Hunting & Vulnerability Analysis</span>
+        <span class="percentage-label">80%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-fill" style="width: 80%;">80%</div>
+      </div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-title">
+        <span>Automation & Scripting</span>
+        <span class="percentage-label">70%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-fill" style="width: 70%;">70%</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Animate progress bars on scroll using IntersectionObserver
+  document.addEventListener('DOMContentLoaded', () => {
+    const progressFills = document.querySelectorAll('.progress-fill');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          const el = entry.target;
+          const width = el.style.width;
+          el.style.width = '0';
+          setTimeout(() => {
+            el.style.width = width;
+          }, 150);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.6 });
+
+    progressFills.forEach(fill => {
+      observer.observe(fill);
+    });
+  });
+</script>
+{% endblock %}

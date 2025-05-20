@@ -1,0 +1,25 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}
+VillenSec | Portfolio - Home
+{% endblock %}
+
+{% block content %}
+<main class="hero-section">
+  <div class="text-section" data-aos="fade-up">
+    <p class="intro">Yo, what's up?!</p>
+    <h1>I'm Villen<br><span>Tech & Cybersecurity Enthusiast</span></h1>
+    <div class="tag" id="rotating-roles">
+      Programmer
+    </div>
+    <p class="desc">
+      A passionate coder who lives in the world of algorithms, scripts, and secure hacks.     I blend technology and creativity to build robust web apps, break down security barriers ethically, and win in gaming battles. Always pushing limits and leveling up my skills. 
+      Let's connect and create something epic!
+    </p>
+  </div>
+  <div class="image-section" data-aos="fade-left">
+    <img src="{% static 'images/rahul.png' %}" alt="Villen Profile Picture">
+  </div>
+</main>
+{% endblock %}

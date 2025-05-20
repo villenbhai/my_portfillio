@@ -1,0 +1,56 @@
+.about-section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+}
+
+.about-section h1 {
+  font-size: 3rem;
+  color: #0a2e6e;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  flex: 2 1 500px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+
+.btn-download {
+  background: #0a2e6e;
+  padding: 0.8rem 1.4rem;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-download:hover {
+  background: #05306b;
+}

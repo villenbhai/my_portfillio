@@ -1,0 +1,49 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block title %}Experience | Alexander Aronowitz{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/experience.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="experience-section" data-aos="fade-up">
+  <h1>My Experience</h1>
+  <p>Here’s a glimpse into my journey as a Web Developer and Security Researcher.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-icon">💻</div>
+      <div class="timeline-content">
+        <h2>Freelance Web Developer</h2>
+        <span class="date">2025 - Present</span>
+        <p>
+          Crafted modern, responsive websites and web applications using HTML, CSS, JavaScript, Django, React, and Tailwind. Collaborated with clients to bring their vision to life.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">🛡️</div>
+      <div class="timeline-content">
+        <h2>Security Researcher</h2>
+        <span class="date">2024 - Present</span>
+        <p>
+          Conducted vulnerability assessments and ethical hacking on real-world applications. Participated in bug bounty programs, reported security flaws, and contributed to open-source security tools.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">🎓</div>
+      <div class="timeline-content">
+        <h2>Student - Delhi University</h2>
+        <span class="date">2024 - Present</span>
+        <p>
+          Pursuing BSc in Physical Sciences (PME). Balancing rigorous academics with a thriving career in web development and cybersecurity.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

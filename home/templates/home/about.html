@@ -1,0 +1,32 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}About Me | Rahul Yadav{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="about-section" data-aos="fade-up">
+  <h1>About Me</h1>
+  <div class="about-container">
+    <div class="about-image">
+      <img src="{% static 'images/rahul_yadav.jpg' %}" alt="Rahul Yadav" />
+    </div>
+    <div class="about-text">
+      <p>Hey there! I’m <strong>Rahul Yadav</strong>, a passionate tech and cybersecurity enthusiast, coder, and digital explorer based in Delhi. I love diving deep into programming, hacking ethically, and building creative solutions that empower and secure the digital world.</p>
+
+      <p>My journey started with a curiosity for computers and coding during my early days at Delhi University. Over time, I honed my skills in Python, C++, Java, and web technologies, blending them with cybersecurity tactics and ethical hacking to create powerful digital defenses.</p>
+
+      <p>When I’m not coding or securing networks, you’ll find me gaming hard in PUBG, Free Fire, or GTA 5, always ready to level up both virtually and in real life. I also mentor aspiring hackers and developers, sharing knowledge and fostering a community of learners and innovators.</p>
+
+      <p><strong>Specialties:</strong> Cybersecurity, Ethical Hacking, Programming (Python, C++, Java), Web Development (Django, React), Bug Bounty Hunting, Gaming Strategies, and Tech Content Creation.</p>
+
+      <p>Outside the digital world, I enjoy writing romantic shayari, reflecting on life’s nuances, and crafting meaningful connections through words. Also, there’s a special someone in my heart — her name is <strong>Rani</strong>, and she inspires me every day.</p>
+
+      <p><a href="{% static 'docs/rahul_resume.pdf' %}" target="_blank" class="btn-download">Download My Résumé</a></p>
+    </div>
+  </div>
+</section>
+{% endblock %}
